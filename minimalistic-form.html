@@ -170,7 +170,7 @@ textarea:hover {
 <body style="background-color:white">
     <header>LEAVE ME A MESSAGE</header>
 
-    <form id="subscribe-form" class="topBefore form" action="https://gh5o9yd7nf.execute-api.us-east-1.amazonaws.com/dev/api/subscribe" method="POST">
+    <form id="#subscribe-form" class="topBefore form" action="https://gh5o9yd7nf.execute-api.us-east-1.amazonaws.com/dev/api/subscribe" method="POST">
             <input id="client" name="client" type="hidden" value="33072b28-0f73-4246-b78f-2c1fdecbc707" />
             <input id="name" name="name" type="text" placeholder="NAME">
             <input id="email" name="email" type="text" placeholder="E-MAIL">
@@ -182,7 +182,7 @@ textarea:hover {
     </form>
 
     <script type="text/javascript">
-      document.querySelector('.form').addEventListener('submit', function(e) {
+      document.querySelector('#form').addEventListener('submit', function(e) {
       //prevent Default functionality
       e.preventDefault();
       
