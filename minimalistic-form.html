@@ -182,6 +182,9 @@ textarea:hover {
     </form>
 
     <script type="text/javascript">
+    $( "#submit" ).click(function() {
+        $("#response").css("display", "block");
+    });
       document.querySelector('#form').addEventListener('submit', function(e) {
       //prevent Default functionality
       e.preventDefault();
