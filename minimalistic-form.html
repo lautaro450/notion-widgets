@@ -206,7 +206,7 @@ textarea:hover {
               url: 'https://gh5o9yd7nf.execute-api.us-east-1.amazonaws.com/dev/api/subscribe',
               type: 'post',
               dataType: 'application/json',
-              data: $("#subscribe-form").serialize(),
+              data: $("#form").serialize(),
               success: function(data) {
                 $("#response").css("display", "block");
               }
