@@ -1,3 +1,7 @@
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    </head>
+    
 <style>
 @import url(https://fonts.googleapis.com/css?family=Lato:100,300,400);
 
@@ -168,24 +172,29 @@ textarea:hover {
 }
 </style>
 <body style="background-color:white">
-    <header>LEAVE ME A MESSAGE</header>
-
-    <form id="form" class="topBefore form" action="https://gh5o9yd7nf.execute-api.us-east-1.amazonaws.com/dev/api/subscribe" method="POST">
-            <input id="client" name="client" type="hidden" value="33072b28-0f73-4246-b78f-2c1fdecbc707" />
-            <input id="name" name="name" type="text" placeholder="NAME">
-            <input id="email" name="email" type="text" placeholder="E-MAIL">
-            <textarea id="message" type="text" placeholder="MESSAGE"></textarea>
-    <input id="submit" type="submit" value="GO!">
-
     <header id="response" style="display:none">Thank you! I will contact you as soon as possible.</header>
+
+    <div id="leave-message">
+        <header>LEAVE ME A MESSAGE</header>
+
+        <form id="form" class="topBefore form" action="https://gh5o9yd7nf.execute-api.us-east-1.amazonaws.com/dev/api/subscribe" method="POST">
+                <input id="client" name="client" type="hidden" value="33072b28-0f73-4246-b78f-2c1fdecbc707" />
+                <input id="name" name="name" type="text" placeholder="NAME">
+                <input id="email" name="email" type="text" placeholder="E-MAIL">
+                <textarea id="message" type="text" placeholder="MESSAGE"></textarea>
+        <input id="submit" type="submit" value="GO!">        
+        </form>
+    </div>
     
-    </form>
+
 
     <script type="text/javascript">
     $( "#submit" ).click(function() {
         $("#response").css("display", "block");
+        $("#leave-message").css("display", "none");
     });
-      document.querySelector('#form').addEventListener('submit', function(e) {
+
+      document.querySelector(".form").addEventListener('submit', function(e) {
       //prevent Default functionality
       e.preventDefault();
       
